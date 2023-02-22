@@ -18,9 +18,23 @@ namespace SoyBoyMod.Upgrades
 
         //       public override string Portrait => "";
 
-        public override void ApplyUpgrade(TowerModel tower)
+        public override void ApplyUpgrade(TowerModel towerModel)
         {
-            tower.GetWeapon().emission = new ArcEmissionModel("ArcEmissionModel_", 3, 0, 15, null, false);
+            foreach (var weaponModel in towerModel.GetWeapons())
+            {
+                towerModel.GetWeapon().emission = new ArcEmissionModel("ArcEmissionModel_", 3, 0, 20, null, false);
+                if (towerModel.tier == 3)
+                {
+                    weaponModel.projectile.pierce -= 1;
+                }
+                else
+                {
+                    weaponModel.projectile.pierce += 1;
+                }
+            }
+
+            var attackModel = towerModel.GetAttackModel();
+            var projectile = attackModel.weapons[0].projectile;
         }
     }
 }

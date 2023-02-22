@@ -24,7 +24,7 @@ namespace SoyBoyMod.Upgrades
                 tower.range += 15;
                 tower.GetAttackModel().range += 15;
 
-                weaponModel.Rate *= .333333f;
+                weaponModel.Rate *= .666666f;
             }
         }
     }

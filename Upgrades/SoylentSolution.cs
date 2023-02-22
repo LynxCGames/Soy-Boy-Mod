@@ -2,6 +2,7 @@
 using Il2CppAssets.Scripts.Simulation.Towers;
 using BTD_Mod_Helper.Api.Towers;
 using BTD_Mod_Helper.Extensions;
+using Il2CppAssets.Scripts.Models.Towers.Weapons;
 
 
 namespace SoyBoyMod.Upgrades
@@ -21,9 +22,9 @@ namespace SoyBoyMod.Upgrades
         {
             foreach (var weaponModel in tower.GetWeapons())
             {
-                weaponModel.projectile.GetDamageModel().damage += 2;
+                weaponModel.Rate *= .333333f;
 
-                weaponModel.Rate *= 3.0f;
+                weaponModel.projectile.GetDamageModel().damage += 1;
             }
         }
     }

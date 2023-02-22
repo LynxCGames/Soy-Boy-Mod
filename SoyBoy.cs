@@ -6,6 +6,7 @@ using Il2CppAssets.Scripts.Models.TowerSets;
 using BTD_Mod_Helper.Api.Enums;
 using BTD_Mod_Helper.Api.Towers;
 using BTD_Mod_Helper.Extensions;
+using Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions;
 
 namespace SoyBoyMod
 {
