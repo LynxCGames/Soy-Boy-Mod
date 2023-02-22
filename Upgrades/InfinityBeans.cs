@@ -21,10 +21,12 @@ namespace SoyBoyMod.Upgrades
 
         public override void ApplyUpgrade(TowerModel tower)
         {
-            tower.GetWeapon().emission = new ArcEmissionModel("ArcEmissionModel_", 6, 0, 30, null, false);
+            tower.GetWeapon().emission = new ArcEmissionModel("ArcEmissionModel_", 10, 0, 50, null, false);
 
             foreach (var weaponModel in tower.GetWeapons())
             {
+                weaponModel.projectile.pierce += 5;
+
                 weaponModel.projectile.GetDamageModel().damage += 46;
 
                 weaponModel.Rate *= .5f;

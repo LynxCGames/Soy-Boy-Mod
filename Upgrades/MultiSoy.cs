@@ -14,7 +14,7 @@ namespace SoyBoyMod.Upgrades
         public override int Cost => 950;
 
         public override string DisplayName => "Multi Soy";
-        public override string Description => "Soy beans now throws three soy beans at a time";
+        public override string Description => "Soy Boy now throws three soy beans at a time";
 
         //       public override string Portrait => "";
 

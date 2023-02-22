@@ -23,7 +23,7 @@ namespace SoyBoyMod.Upgrades
             {
                 weaponModel.projectile.GetDamageModel().damage += 2;
 
-                weaponModel.Rate *= 3f;
+                weaponModel.Rate *= 3.0f;
             }
         }
     }

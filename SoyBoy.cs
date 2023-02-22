@@ -25,7 +25,6 @@ namespace SoyBoyMod
         {
             var attackModel = towerModel.GetAttackModel();
             var projectile = attackModel.weapons[0].projectile;
-            projectile.pierce -= 1;
 
             foreach (var weaponModel in towerModel.GetWeapons())
             {
