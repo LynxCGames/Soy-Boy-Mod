@@ -4,7 +4,7 @@
         <RootNamespace>SoyBoyMod</RootNamespace>
         <Configurations>Debug;Release</Configurations>
         <Nullable>enable</Nullable>
-        <AssemblyName>SopyyBoyMod</AssemblyName>
+        <AssemblyName>SoyBoyMod</AssemblyName>
         <LangVersion>latest</LangVersion>
         <Optimize>False</Optimize>
         <DebugType>embedded</DebugType>

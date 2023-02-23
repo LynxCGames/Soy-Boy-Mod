@@ -9,5 +9,5 @@ public static class ModHelperData
     public const string Description = "Adds Soy Boy";
 
     public const string RepoOwner = "LynxCGames"; // TODO add your github username hero, also in the download url in README.md
-    public const string RepoName = "soy-boy"; // TODO add your repo name here, also in the download url in README.md
+    public const string RepoName = "Soy-Boy-Mod"; // TODO add your repo name here, also in the download url in README.md
 }
