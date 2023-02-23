@@ -12,6 +12,7 @@ using Il2CppAssets.Scripts.Models.Towers.Weapons.Behaviors;
 using Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors;
 using Il2CppAssets.Scripts.Unity;
 using Il2CppAssets.Scripts.Unity.Towers;
+using SoyBoyMod.Displays.Projectiles;
 
 namespace SoyBoyMod.Upgrades
 {
@@ -24,28 +25,27 @@ namespace SoyBoyMod.Upgrades
         public override string DisplayName => "Infinity Beans";
         public override string Description => "I am... inevitable";
 
-        //       public override string Portrait => "";
-
         public override void ApplyUpgrade(TowerModel towerModel)
         {
             var attackModel = towerModel.GetAttackModel();
 
-            towerModel.range += 20;
-            towerModel.GetAttackModel().range += 20;
+            var projectile = attackModel.weapons[0].projectile;
+            projectile.ApplyDisplay<DarkSoyBeanDisplay>();
 
-            towerModel.GetWeapon().emission = new ArcEmissionModel("ArcEmissionModel_", 6, 0, 45, null, false);
+            towerModel.range += 25;
+            towerModel.GetAttackModel().range += 25;
+
+            towerModel.GetWeapon().emission = new ArcEmissionModel("ArcEmissionModel_", 8, 0, 100, null, false);
 
             foreach (var weaponModel in towerModel.GetWeapons())
             {
-                weaponModel.projectile.pierce -= 3;
-
-                weaponModel.projectile.GetDamageModel().damage += 12;
+                weaponModel.projectile.GetDamageModel().damage += 17;
             }
 
-            attackModel.weapons[0].projectile.AddBehavior(Game.instance.model.GetTowerFromId("BombShooter-001").GetAttackModel().weapons[0].projectile.GetBehavior<CreateProjectileOnContactModel>().Duplicate());
-            attackModel.weapons[0].projectile.AddBehavior(Game.instance.model.GetTowerFromId("BombShooter-001").GetAttackModel().weapons[0].projectile.GetBehavior<CreateEffectOnContactModel>().Duplicate());
-            attackModel.weapons[0].projectile.AddBehavior(Game.instance.model.GetTowerFromId("BombShooter-001").GetAttackModel().weapons[0].projectile.GetBehavior<CreateSoundOnProjectileCollisionModel>().Duplicate());
-            attackModel.weapons[0].projectile.GetBehavior<CreateProjectileOnContactModel>().projectile.GetDamageModel().damage = 10.0f;
+            attackModel.weapons[0].projectile.AddBehavior(Game.instance.model.GetTowerFromId("BombShooter-300").GetAttackModel().weapons[0].projectile.GetBehavior<CreateProjectileOnContactModel>().Duplicate());
+            attackModel.weapons[0].projectile.AddBehavior(Game.instance.model.GetTowerFromId("BombShooter-300").GetAttackModel().weapons[0].projectile.GetBehavior<CreateEffectOnContactModel>().Duplicate());
+            attackModel.weapons[0].projectile.AddBehavior(Game.instance.model.GetTowerFromId("BombShooter-300").GetAttackModel().weapons[0].projectile.GetBehavior<CreateSoundOnProjectileCollisionModel>().Duplicate());
+            attackModel.weapons[0].projectile.GetBehavior<CreateProjectileOnContactModel>().projectile.GetDamageModel().damage = 20.0f;
             attackModel.weapons[0].projectile.GetBehavior<CreateProjectileOnContactModel>().projectile.pierce = 25.0f;
         }
     }

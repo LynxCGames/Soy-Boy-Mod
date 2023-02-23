@@ -7,6 +7,8 @@ using BTD_Mod_Helper.Api.Enums;
 using BTD_Mod_Helper.Api.Towers;
 using BTD_Mod_Helper.Extensions;
 using Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions;
+using Il2CppAssets.Scripts.Models.Towers.Behaviors.Attack;
+using SoyBoyMod.Displays.Projectiles;
 
 namespace SoyBoyMod
 {
@@ -26,11 +28,17 @@ namespace SoyBoyMod
         {
             var attackModel = towerModel.GetAttackModel();
             var projectile = attackModel.weapons[0].projectile;
+            projectile.ApplyDisplay<SoyBeanDisplay>();
 
             foreach (var weaponModel in towerModel.GetWeapons())
             {
                 weaponModel.projectile.GetDamageModel().damage += 1;
             }
+        }
+
+        public override int GetTowerIndex(List<TowerDetailsModel> towerSet)
+        {
+            return towerSet.First(model => model.towerId == TowerType.EngineerMonkey).towerIndex + 1;
         }
     }
 }

@@ -15,8 +15,6 @@ namespace SoyBoyMod.Upgrades
         public override string DisplayName => "Piercing Soy";
         public override string Description => "Soy beans pierce more bloons";
 
- //       public override string Portrait => "";
-
         public override void ApplyUpgrade(TowerModel tower)
         {
             foreach (var weaponModel in tower.GetWeapons())

@@ -11,16 +11,17 @@ namespace SoyBoyMod.Upgrades
     {
         public override int Path => MIDDLE;
         public override int Tier => 4;
-        public override int Cost => 3250;
+        public override int Cost => 4250;
 
         public override string DisplayName => "Soylent Solution";
         public override string Description => "Soy Boy gains super fast attacking";
 
-        //       public override string Portrait => "";
-
-        public override void ApplyUpgrade(TowerModel tower)
+        public override void ApplyUpgrade(TowerModel towerModel)
         {
-            foreach (var weaponModel in tower.GetWeapons())
+            towerModel.range += 5;
+            towerModel.GetAttackModel().range += 5;
+
+            foreach (var weaponModel in towerModel.GetWeapons())
             {
                 weaponModel.Rate *= .333333f;
 

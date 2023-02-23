@@ -10,12 +10,10 @@ namespace SoyBoyMod.Upgrades
     {
         public override int Path => MIDDLE;
         public override int Tier => 2;
-        public override int Cost => 500;
+        public override int Cost => 650;
 
         public override string DisplayName => "Soy Milk";
         public override string Description => "Soy Boy can throw further and attack faster";
-
-        //       public override string Portrait => "";
 
         public override void ApplyUpgrade(TowerModel tower)
         {
