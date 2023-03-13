@@ -14,7 +14,37 @@ namespace SoyBoyMod.Displays.Projectiles
         }
     }
 
+    public class StrongSoyBeanDisplay : ModDisplay
+    {
+        public override string BaseDisplay => Generic2dDisplay;
+
+        public override void ModifyDisplayNode(UnityDisplayNode node)
+        {
+            Set2DTexture(node, Name);
+        }
+    }
+
+    public class SoyBeanSpikedDisplay : ModDisplay
+    {
+        public override string BaseDisplay => Generic2dDisplay;
+
+        public override void ModifyDisplayNode(UnityDisplayNode node)
+        {
+            Set2DTexture(node, Name);
+        }
+    }
+
     public class SoyBeanLargeDisplay : ModDisplay
+    {
+        public override string BaseDisplay => Generic2dDisplay;
+
+        public override void ModifyDisplayNode(UnityDisplayNode node)
+        {
+            Set2DTexture(node, Name);
+        }
+    }
+
+    public class SoyBeanSuperDisplay : ModDisplay
     {
         public override string BaseDisplay => Generic2dDisplay;
 

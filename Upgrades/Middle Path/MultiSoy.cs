@@ -1,11 +1,10 @@
 ﻿using Il2CppAssets.Scripts.Models.Towers;
 using Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions;
-using Il2CppAssets.Scripts.Simulation.Towers;
 using BTD_Mod_Helper.Api.Towers;
 using BTD_Mod_Helper.Extensions;
 
 
-namespace SoyBoyMod.Upgrades
+namespace SoyBoyMod.Upgrades.Middle_Path
 {
     public class MultiSoy : ModUpgrade<SoyBoy>
     {
@@ -14,7 +13,7 @@ namespace SoyBoyMod.Upgrades
         public override int Cost => 1200;
 
         public override string DisplayName => "Multi Soy";
-        public override string Description => "Soy Boy now throws three soy beans at a time";
+        public override string Description => "Soy Boy now throws three soy beans at a time.";
 
         public override void ApplyUpgrade(TowerModel towerModel)
         {

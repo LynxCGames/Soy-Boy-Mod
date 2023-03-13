@@ -1,10 +1,9 @@
 ﻿using Il2CppAssets.Scripts.Models.Towers;
-using Il2CppAssets.Scripts.Simulation.Towers;
 using BTD_Mod_Helper.Api.Towers;
 using BTD_Mod_Helper.Extensions;
 
 
-namespace SoyBoyMod.Upgrades
+namespace SoyBoyMod.Upgrades.Middle_Path
 {
     public class SoyMilk : ModUpgrade<SoyBoy>
     {
@@ -13,7 +12,7 @@ namespace SoyBoyMod.Upgrades
         public override int Cost => 650;
 
         public override string DisplayName => "Soy Milk";
-        public override string Description => "Soy Boy can throw further and attack faster";
+        public override string Description => "Soy Boy can throw further and attack faster.";
 
         public override void ApplyUpgrade(TowerModel tower)
         {

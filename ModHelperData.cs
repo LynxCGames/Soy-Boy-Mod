@@ -2,12 +2,12 @@
 
 public static class ModHelperData
 {
-    public const string WorksOnVersion = "34.3";
-    public const string Version = "1.0.0";
+    public const string WorksOnVersion = "35.0";
+    public const string Version = "1.1.0";
     public const string Name = "Soy Boy";
 
     public const string Description = 
-        "Adds Soy Boy as a new tower (yes, it is a meme tower). This is my first BTD 6 mod so bare with it. Soy Boy currently only has one upgrade path but I plan to add the other two upgrade paths real soon.";
+        "Adds Soy Boy as a new tower (he throws soy beans at Bloons). This is my first BTD 6 mod so bare with it. Upgrade Soy Boy to unlock more and more of his power and conquer the Bloons.";
 
     public const string RepoOwner = "LynxCGames";
     public const string RepoName = "Soy-Boy-Mod";
