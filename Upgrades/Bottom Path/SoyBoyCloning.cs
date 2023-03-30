@@ -19,7 +19,7 @@ namespace SoyBoyMod.Upgrades.Bottom_Path
         public override int Cost => 2700;
 
         public override string DisplayName => "Soy Boy Cloning";
-        public override string Description => "SoyBoy clones are now stronger and more plentiful.";
+        public override string Description => "Soy Boy clones are now stronger and more plentiful.";
 
         public override void ApplyUpgrade(TowerModel towerModel)
         {
