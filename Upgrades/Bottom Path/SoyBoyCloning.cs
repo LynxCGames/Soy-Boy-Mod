@@ -23,6 +23,14 @@ namespace SoyBoyMod.Upgrades.Bottom_Path
 
         public override void ApplyUpgrade(TowerModel towerModel)
         {
+            foreach (var attacks in towerModel.GetAttackModels())
+            {
+                if (attacks.name.Contains("Tower"))
+                {
+                    towerModel.RemoveBehavior(attacks);
+                }
+            }
+
             towerModel.range += 15;
             towerModel.GetAttackModel().range += 15;
 
@@ -72,7 +80,7 @@ namespace Clones
             }
 
             towerModel.isSubTower = true;
-            towerModel.AddBehavior(new TowerExpireModel("ExpireModel", 20f, 1, false, false));
+            towerModel.AddBehavior(new TowerExpireModel("ExpireModel", 20f, 5, false, false));
         }
 
         public class SoyBoy1Display : ModTowerDisplay<SoyBoy120>

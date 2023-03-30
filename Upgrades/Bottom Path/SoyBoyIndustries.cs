@@ -25,6 +25,14 @@ namespace SoyBoyMod.Upgrades.Bottom_Path
 
         public override void ApplyUpgrade(TowerModel towerModel)
         {
+            foreach (var attacks in towerModel.GetAttackModels())
+            {
+                if (attacks.name.Contains("Tower"))
+                {
+                    towerModel.RemoveBehavior(attacks);
+                }
+            }
+
             var towersoyboyTop = Game.instance.model.GetTowerFromId("EngineerMonkey-200").GetAttackModel().Duplicate();
             towersoyboyTop.name = "SoyBoyTop_Tower";
             towersoyboyTop.weapons[0].Rate = 7.5f;
@@ -86,7 +94,7 @@ namespace BetterClones
             projectile.AddBehavior(stun);
 
             towerModel.isSubTower = true;
-            towerModel.AddBehavior(new TowerExpireModel("ExpireModel", 30f, 1, false, false));
+            towerModel.AddBehavior(new TowerExpireModel("ExpireModel", 30f, 5, false, false));
         }
 
         public class BiggerBeansDisplay : ModTowerDisplay<SoyBoy400>
@@ -152,7 +160,7 @@ namespace BetterClones
             }
 
             towerModel.isSubTower = true;
-            towerModel.AddBehavior(new TowerExpireModel("ExpireModel", 30f, 1, false, false));
+            towerModel.AddBehavior(new TowerExpireModel("ExpireModel", 30f, 5, false, false));
         }
 
         public class BiggerBeansDisplay : ModTowerDisplay<SoyBoy040>

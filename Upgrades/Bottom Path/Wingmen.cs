@@ -69,7 +69,7 @@ namespace Clones
             }
 
             towerModel.isSubTower = true;
-            towerModel.AddBehavior(new TowerExpireModel("ExpireModel", 30f, 1, false, false));
+            towerModel.AddBehavior(new TowerExpireModel("ExpireModel", 30f, 5, false, false));
         }
 
         public class SoyBoy1Display : ModTowerDisplay<SoyBoy000>

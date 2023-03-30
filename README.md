@@ -10,6 +10,5 @@ This is my first ever mod for Bloons TD 6 (so bare with me) and it's meant as a 
 In the Works:
 - Updated artwork (portraits, icons, and projectiles)
 - New Model designs
-- A paragon - Soypocalypse
 
 [![Requires BTD6 Mod Helper](https://raw.githubusercontent.com/gurrenm3/BTD-Mod-Helper/master/banner.png)](https://github.com/gurrenm3/BTD-Mod-Helper#readme)

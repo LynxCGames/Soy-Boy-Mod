@@ -20,6 +20,8 @@ namespace SoyBoyMod
         public override int BottomPathUpgrades => 5;
         public override string Description => "Soy Boy, the ultimate bringer of doom";
 
+        public override ParagonMode ParagonMode => ParagonMode.Base555;
+
         public override void ModifyBaseTowerModel(TowerModel towerModel)
         {
             var attackModel = towerModel.GetAttackModel();
